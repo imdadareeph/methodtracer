@@ -1,0 +1,6 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.aspect.MethodLogger"/>
+        <aspect name="com.aspect.MethodLoggerEntryPoint"/>
+    </aspects>
+</aspectj>
