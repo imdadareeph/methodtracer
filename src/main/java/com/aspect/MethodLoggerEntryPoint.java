@@ -15,13 +15,11 @@ public class MethodLoggerEntryPoint {
     public void log(JoinPoint thisJoinPoint) {
         final String joinPointName = thisJoinPoint.getThis().getClass().getSimpleName() + "." + thisJoinPoint.getSignature().getName() + "()";
         System.out.println("Entering [" + joinPointName + "]");
-       // System.out.println("Before advice on " + thisJoinPoint);
     }
 
     @After("execution(* *(..))")
     public void afterAdvice(JoinPoint thisJoinPoint) {
         final String joinPointName = thisJoinPoint.getThis().getClass().getSimpleName() + "." + thisJoinPoint.getSignature().getName() + "()";
         System.out.println("Leaving  [" + joinPointName + "]");
-        //System.out.println("After advice on " + thisJoinPoint);
     }
 }
